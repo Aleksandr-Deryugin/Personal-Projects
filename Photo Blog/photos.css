@@ -1,0 +1,37 @@
+main>section>img {
+  width: 30%;
+  margin: calc(10%/6);
+}
+section>p{
+  margin-left:calc(10%/6);
+  width: 30%;
+  font-family: 'Raleway', sans-serif;
+  font-size: .75em;
+  padding: .7em 0;
+  border-bottom: 2px solid #f1f1f1;
+  color: black;
+}
+section{
+  border-bottom: 2px solid #e2e2e2;
+}
+
+header>nav{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  width: 30%;
+  margin-left: calc(10%/6);
+  padding:.7em 0;
+}
+footer>p{
+  font-family: 'Raleway',sans-serif;
+  font-size: .72em;
+  margin-left: calc(10%/6);
+  width: 30%;
+  padding: .6em 0;
+}
+p>a{
+  text-decoration: none;
+  color: rgb(122, 122, 122);
+}
