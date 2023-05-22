@@ -1,0 +1,239 @@
+* {box-sizing:border-box;}
+
+  #wrapper{
+    margin-right: auto;
+    background-color: #90C7E3;
+    background-image:linear-gradient(#FFFFFF, #90C7E3);
+    background-repeat: no-repeat;
+  }
+  
+  #homehero{
+    height: 300px;
+    background-image: url(additionalcontent/coast2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #yurthero{
+    height: 300px;
+    background-image: url(additionalcontent/yurt.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #trailhero{
+    height: 300px;
+    background-image: url(additionalcontent/trail.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #contact{
+    font-size: 90%;
+  }
+
+body{
+ background-color: #EAEAEA;
+ color: #555555;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  background-color: #002171;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+header a{
+  text-decoration: none;
+}
+header a:link{
+  color: #FFFFFF;
+}
+header a:visited{
+  color:#FFFFFF;
+}
+header a:hover{
+  color: #90C7E3;
+}
+
+nav{
+  font-weight: bold;
+  font-size: 120%;
+  padding: 0;
+  text-align: center;
+}
+
+nav a{
+  text-decoration: none;
+  transition: color 3s ease-out;
+}
+nav a:link {
+  color: #5c7fa3;
+}
+nav a:visited{
+  color: #344873;
+}
+nav a:hover{
+  color: #A52A2A;
+}
+
+nav ul{
+  margin: 0;
+  padding-left: 0;
+  font-size: 1.2em;
+}
+nav li{
+  border-bottom: 1px solid darkblue;
+}
+
+main ul{
+  list-style-image: url(marker.gif);
+}
+
+main{
+  background-color: #FFFFFF;
+  padding: 1px 20px 20px 30px;
+  overflow: auto;
+  display: block;
+}
+
+h1{
+  margin-bottom : 0;  
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: .25em;
+  margin-top: 0px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+h2{
+  color: #1976d2;
+font-family: Georgia, 'Times New Roman', serif;
+  text-shadow: 1px 1px 0 #CCCCCC;
+}
+
+h3{
+  font-family: Georgia, 'Times New Roman', serif;
+  text-decoration: #000033;
+}
+
+footer{
+  font-size: 75%;
+  font: italic;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-family: Georgia, 'Times New Roman', serif;
+  padding: 2em;
+}
+
+dt{
+  color: #002171;
+} 
+
+.resort{
+  color: #1976d2;
+  font-weight: bold;
+}
+
+table {
+  border: 2px solid #3399CC;
+  border-collapse: collapse;
+}
+td th {
+  padding: .5em;
+  border: 2px solid #3399CC;
+}
+td {
+  text-align: center;
+}
+.text {
+  text-align: left;
+}
+tr:nth-of-type(odd) {
+  background-color: #F5FAFC;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+input textarea {
+  margin-bottom: .5em;
+}
+video {
+  display: flex;
+  float: right;
+  margin: 1em;
+  width: 320px; 
+  height: 240px;
+}
+
+@media screen and (min-width: 600px){
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  nav li{
+    border-bottom: none;
+  }
+  
+  section{
+    margin-left:2em;
+    margin-right:2em;
+    flex: 1;
+  }
+  .flow{
+    display: flex;
+    flex-direction: row;
+  }
+  form{
+    width: 60%;
+    max-width: 30em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 6em 1fr;
+  }
+  input[type=submit] {
+    grid-column: 2/2;
+    width: 9em;
+  }
+
+  @media screen and (min-width: 1024px){
+    #wrapper{
+      margin:auto;
+      width: 80%;
+      border: 1px solid darkblue;
+      box-shadow: 3px 3px 3px darkblue;
+    }
+    nav{
+      text-align: left;
+      padding-left: 1em;
+    }
+    @supports(display:grid){
+      nav ul{
+        flex-direction: column;
+        padding-top: 1em;
+      }
+      header{ grid-area: header;}
+      nav{grid-area: nav;}
+      .hero{grid-area: hero;}
+      main{grid-area: main;}
+      footer{grid-area: footer;}
+      
+      #wrapper{
+        display: grid;
+  
+        grid-template:
+        "header header"
+        "nav    hero"
+        "nav    main"
+        "nav    footer"
+        ;
+      }
+    }
+  }
+}

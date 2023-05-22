@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pacific Trails Resort::Reservations</title>
+    <link rel="stylesheet" href="pacific.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”description” content=”Pacific Trails Resort, company that offers vacation packages at its resort, shows what Yurt packages are offered, shows list of Activities, able to make Reservations”>
+  </head>
+<div id="wrapper">
+  <body>
+    <header>
+      <h1><a href="index.html">Pacific Trails Resort</a></h1>
+    </header>
+    <nav>
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      
+      <li><a href="yurts.html">Yurts</a></li>
+      
+      <li><a href="activities.html">Activites</a></li>
+
+      <li><a href="reservations.html">Reservations</a></li>
+    </ul>
+    </nav>
+    <main>
+      <h2>Reservations at Pacific Trails</h2>
+      <h3>Contact Us Today!</h3>
+      <p>Required fields are marked with an asterisk *</p>
+      <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+        <label>*First Name:</label><input type="text" id="myFName" name="myFName" required for="myFirstName">
+        <label>*Last Name:</label><input type="text" id="myLN" name="myLN" required for="myLastName">
+        <label>*E-mail:</label><input type="email" id="myEmail" name="myEmail" required for="myEmailAddress">
+        <label>Phone:</label><input type="tel" id="myPhone" name="myPhone" for="myPhone" maxlength="12">
+        <label>Arrival Date:</label><input type="date" id="myArrival" name="myArrival" for="myArrival">
+        <label>Nights:</label><input type="number" id="myNnights" name="myNights" for="myNights" min="1" max="14">
+        <label>*Comments:</label><textarea id="myComments" name="myComments" rows="2" cols="30" for="myComments"></textarea>
+        <input type="submit">
+
+      </form>
+      <div id="contact">
+        <span class="resort">Pacific Trails Resort</span><br>
+          12010 Pacific Trails Road<br>
+          Zephyr, CA 95555<br>
+          <br>
+          888-555-5555
+          <br>
+      </div>
+    </main>
+    <footer>
+      Copyright &copy; 2022 Pacific Trails Resort<br>
+      <a href="maltio:Aleksandr@Deryugin.com">Aleksandr@Deryugin.com</a>
+    </footer>
+  </body>
+</div>
+</html>
+
